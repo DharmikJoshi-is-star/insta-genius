@@ -12,8 +12,8 @@ import { Skeleton } from '@/components/ui/skeleton';
 interface HashtagSelectorProps {
   suggestedByAI: string[];
   activeHashtags: string[];
-  onAdd: (hashtag: string) => void; // Adds to activeHashtags
-  onRemove: (hashtag: string) => void; // Removes from activeHashtags
+  onAdd: (hashtag: string) => void;
+  onRemove: (hashtag: string) => void;
   isLoading: boolean;
   feedback?: string;
 }
@@ -25,7 +25,7 @@ export function HashtagSelector({
   onRemove,
   isLoading,
   feedback,
-}: HashtagSelectorProps) {
+}: HashtagSelectorProps): JSX.Element {
   const [newHashtagInput, setNewHashtagInput] = useState('');
 
   const handleAddCustomHashtag = () => {
