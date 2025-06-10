@@ -40,7 +40,7 @@ export function HashtagSelector({
     if (!activeHashtags.includes(cleanHashtag)) {
       onAdd(cleanHashtag);
     } else {
-      onRemove(cleanHashtag); // Allow deselecting from suggested list if already active
+      onRemove(cleanHashtag);
     }
   };
   
@@ -58,7 +58,7 @@ export function HashtagSelector({
   }
 
   return (
-    <div className="space-y-6">
+    <section className="space-y-6">
       {suggestedByAI.length > 0 && (
         <div>
           <Label className="font-body text-base font-medium mb-2 block">Suggestions (click to add/remove):</Label>
@@ -121,8 +121,9 @@ export function HashtagSelector({
               </Badge>
             ))}
           </div>
+        </div>
         )}
       {feedback && <p className="text-xs text-green-600 mt-2 font-body">{feedback}</p>}
-    </div>
+    </section>
   );
 }
